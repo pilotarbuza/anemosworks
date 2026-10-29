@@ -1,29 +1,31 @@
-# Проверки CAD-ядра
+# CAD Engine Validation
 
-Состояние на **29 октября 2026 года**, версия ядра **1.3.0**.
-Результаты относятся к ядру и MCP-интеграции; настольный EXE-продукт ещё не выпущен.
+[ English | [Русский](VALIDATION.ru.md) ]
 
-| Проверка | Результат |
-| --- | --- |
-| Автоматические тесты Python | 326 успешно |
-| Общий живой прогон Autodesk Fusion 2706.1.14 | 284 проверки, 0 ошибок |
-| Дополнительная живая проверка повторов, сроков ожидания и отмены | 11 проверок, 0 ошибок |
-| Облачные конфигурации Fusion | 7 этапов успешно, включая повторное открытие трёх вариантов и очистку тестовых данных |
-| Новый сеанс MCP по stdio | 140 инструментов; 109 доступных общих CAD-операций Fusion, 19 явно недоступных |
-| Проверка кода Ruff и сборка Python-дистрибутивов | Успешно |
+Status as of **October 29, 2026**, engine core version **1.3.0**.
+Results pertain to the core CAD engine and MCP integration; the standalone desktop installer has not been released.
 
-## Границы поддержки Fusion
+| Test Suite | Result |
+|---|---|
+| Automated Python Unit & Integration Tests | 326 passed |
+| Live Autodesk Fusion Suite (v2706.1.14) | 284 assertions, 0 errors |
+| Command Timeout, Retry & Cancellation Verification | 11 tests, 0 errors |
+| Fusion Cloud Configuration Matrix | 7 stages passed, including branch switching and test artifact cleanup |
+| Fresh MCP Session (stdio transport) | 140 tools exposed; 109 available Fusion CAD operations, 19 explicitly restricted |
+| Ruff Code Quality & Distribution Packaging | Passed |
 
-- 12 общих операций чертежей, 5 операций расчётов/движения и 2 операции анимационного
-  разнесения пока недоступны в адаптере Fusion.
-- Создание рёбер и листовых фланцев использует preview API и зависит от версии Fusion.
-- Конфигурации требуют сохранённого в облаке проекта и соответствующих прав лицензии.
-- Восстановление дерева не является универсальным распознаванием произвольной геометрии.
-- Сложные многолучевые и внутренние пересечения каркасных профилей требуют дальнейшей работы.
-- Уже выполняющийся вызов CAD нельзя безопасно прервать. Отмена защищает ожидающие команды
-  и предотвращает отправку последующих шагов.
+---
 
-Количество тестов не гарантирует правильность любой модели. Геометрию, размеры, сопряжения,
-чертежи и результаты расчётов нужно проверять перед производственным использованием.
+## Autodesk Fusion Support Boundaries
 
-[Вернуться к описанию](../README.md)
+- 12 drawing operations, 5 FEA/motion simulation studies, and 2 exploded-view animation commands are currently unavailable in the Fusion adapter.
+- Rib creation and sheet metal contour flanges rely on preview APIs and depend on host Fusion updates.
+- Configuration switching requires cloud-saved designs with appropriate account license entitlements.
+- Feature tree reconstruction operates on supported geometric primitives and does not represent universal arbitrary shape recognition.
+- Complex multi-beam intersections in structural weldments are under active development.
+- Active in-flight CAD kernel calls cannot be safely aborted mid-execution; cancellation protects pending queues and prevents subsequent command dispatch.
+
+Test suite volume does not guarantee error-free generation of arbitrary mechanical models.
+Critical dimensions, mates, tolerances, drawings, and stress results must be verified by a qualified engineer prior to manufacturing.
+
+[Return to Overview](../README.md)

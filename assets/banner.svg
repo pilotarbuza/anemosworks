@@ -43,9 +43,7 @@
     </text>
 
     <!-- Subtitle (Clean & Human) -->
-    <text x="0" y="54" font-family="'Manrope', -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="400" fill="#97B0B4" letter-spacing="-0.3">
-      AI-автоматизация для SOLIDWORKS и Autodesk Fusion
-    </text>
+    <text x="0" y="54" font-family="'Manrope', -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="400" fill="#97B0B4" letter-spacing="-0.3">AI Automation for SOLIDWORKS &amp; Autodesk Fusion</text>
   </g>
 
   <!-- ==================== RIGHT: OFFICIAL MARK (2X SMALLER, 160px) ==================== -->
