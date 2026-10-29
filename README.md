@@ -1,10 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="AnemosWorks — AI Automation for CAD" width="100%">
-</p>
-
-<p align="center">
-  <strong>AI Automation for SOLIDWORKS and Autodesk Fusion</strong><br>
-  Parametric models, feature-based editing, assemblies, and engineering verification via AI tools.
+  <img src="assets/banner.svg" alt="AnemosWorks — CAD Automation" width="100%">
 </p>
 
 <p align="center">
@@ -12,76 +7,40 @@
   <a href="docs/DOWNLOADS.md">Downloads</a> ·
   <a href="docs/ROADMAP.md">Roadmap</a> ·
   <a href="docs/VALIDATION.md">Validation</a> ·
-  <a href="https://github.com/pilotarbuza/anemosworks/issues">Feedback</a>
+  <a href="https://github.com/pilotarbuza/anemosworks/issues">Issues</a>
 </p>
 
 ---
 
-## Development Status
+AnemosWorks is a CAD automation engine for SOLIDWORKS and Autodesk Fusion. It provides programmatic modeling tools (sketches, features, assemblies, drawings, and geometry checks) through an MCP server and an upcoming desktop application.
 
-**The application is currently in active development. A public Windows EXE installer has not been released yet.**
-The core CAD engine and MCP server are operational; the current validated core version is **1.3.0**.
-The desktop installer and native UI application are being prepared separately.
+## Status
 
-This repository serves as the public product showcase: documentation, technical validation, roadmap, and future downloads.
-The commercial core engine source code is maintained in a private repository.
+The CAD engine and MCP server are working (v1.3.0). The desktop application and standalone installer are in development.
 
----
+This repository contains public product information, documentation, validation reports, and future release downloads. The core engine is maintained in a private repository.
 
-## CAD Engine Capabilities
+## Capabilities
 
-- **Parametric Parts & Features**: Generates and edits parametric parts including sketches, constraints, dimensions, extrusions, revolves, patterns, fillets, chamfers, and advanced modeling features.
-- **Assemblies & Components**: Manages assembly hierarchies, components, standard mates/joints, and fasteners.
-- **Engineering Inspection**: Inspects mass properties, dimensions, interference, rebuild health, and exports standard CAD exchange formats (STEP, IGES, STL, Parasolid).
-- **Sheet Metal & Weldments**: Performs supported sheet metal flange operations and structural weldment profiles within CAD adapter capabilities.
-- **Feature-Tree Reconstruction**: Reconstructs supported prismatic and revolved solid bodies back into editable feature trees, verified against the original geometry.
-- **Model Context Protocol (MCP)**: Exposes 140+ CAD operations as standard tools for compatible AI agents and IDEs.
+- **Parametric parts**: 2D/3D sketches, constraints, dimensions, extrusions, revolves, sweeps, lofts, fillets, chamfers, patterns.
+- **Assemblies**: component insertion, standard mates/joints, hardware fasteners, and interference checks.
+- **Inspection & Export**: mass properties, bounding boxes, rebuild checks, STEP/IGES/STL/Parasolid export.
+- **Sheet metal & Profiles**: sheet metal flanges and structural weldment profiles.
+- **Feature reconstruction**: converts supported prismatic and revolved solid bodies into editable feature trees with geometric deviation checks.
+- **MCP interface**: 140 CAD tools exposed over standard Model Context Protocol.
 
-CAD support varies between platforms: Autodesk Fusion implements **109 of 128 shared CAD operations**.
-Drawings, simulation studies, and animated exploded views in Fusion currently have platform-specific constraints.
-For detailed operational coverage and restrictions, see **[docs/VALIDATION.md](docs/VALIDATION.md)**.
+Autodesk Fusion implements 109 of 128 shared CAD operations. Drawings, FEA studies, and animations in Fusion currently have platform limits. See [docs/VALIDATION.md](docs/VALIDATION.md).
 
----
+## Modes of Operation
 
-## Operational Modes
+1. **MCP Server**: runs as a local tool provider for compatible clients (Claude Desktop, Cursor, and other MCP environments).
+2. **AnemosWorks App**: standalone desktop client with task history, active CAD session detection, and direct document binding (in progress).
 
-| Mode | Target Workflow | Status |
-|---|---|---|
-| **MCP Server** | CAD automation tools integrated into user-selected AI clients (Claude Desktop, Cursor, etc.) | Core operational; platform packaging and validation ongoing |
-| **AnemosWorks App** | Standalone native desktop UI featuring structured tasks, execution history, and direct AI provider integration | In development |
+## Releases
 
-Future releases plan automatic detection of running CAD sessions and dynamic command binding to the active document without manual platform switching.
+When ready, signed Windows installers will be distributed through [GitHub Releases](https://github.com/pilotarbuza/anemosworks/releases). Current details: [docs/DOWNLOADS.md](docs/DOWNLOADS.md).
 
----
+## Author
 
-## AI Account & Licensing
-
-AnemosWorks does not resell neural network subscriptions. The application is designed to utilize the user's own AI accounts via provider-authorized integrations or user-supplied API keys. AnemosWorks licensing and third-party AI provider billing remain separate.
-
-Integration targets include Claude (Anthropic), OpenAI, Google Gemini, and Kimi. Subscription usage allowances, account tiers, and supported client protocols depend strictly on the respective AI provider.
-
-Commercial pricing and subscription terms have not been published. Payments are not currently accepted.
-CAD host software requires appropriate standalone licenses from their respective vendors.
-
----
-
-## Downloads & Releases
-
-A public installer is not currently available. Once released, digitally signed Windows installers, release notes, SHA-256 checksums, and setup guides will be distributed exclusively via **[GitHub Releases](https://github.com/pilotarbuza/anemosworks/releases)**.
-
-For notification of future releases, configure **Watch -> Custom -> Releases** on GitHub.
-Current status details: **[docs/DOWNLOADS.md](docs/DOWNLOADS.md)**.
-
----
-
-## Author & Feedback
-
-- **Lead Engineer**: Maksim Akhmadulin ([GitHub Profile](https://github.com/pilotarbuza) · [pilotarbuza.com](https://pilotarbuza.com))
-- **Technical Feedback & Issues**: [GitHub Issues](https://github.com/pilotarbuza/anemosworks/issues)
-
-Do not post API keys, access tokens, passwords, or confidential CAD geometry in public issues.
-
-SOLIDWORKS and Autodesk Fusion are registered trademarks of their respective owners.
-AnemosWorks is an independent product; references to AI providers and CAD packages do not imply official endorsement or partnership.
-
-Copyright 2026 Maksim Akhmadulin. Terms of use: [LICENSE](LICENSE).
+Maksim Akhmadulin — [pilotarbuza.com](https://pilotarbuza.com)  
+Issues & suggestions: [GitHub Issues](https://github.com/pilotarbuza/anemosworks/issues)
