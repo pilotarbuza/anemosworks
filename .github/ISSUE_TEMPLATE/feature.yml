@@ -1,0 +1,24 @@
+name: Предложение / Feature request
+description: Предложить инженерный сценарий, интеграцию или улучшение.
+title: "[Предложение]: "
+body:
+  - type: markdown
+    attributes:
+      value: Не публикуйте пароли, API-ключи, токены или конфиденциальные CAD-файлы.
+  - type: textarea
+    id: task
+    attributes:
+      label: Какую задачу нужно решить?
+      description: Опишите текущий процесс и ожидаемый результат.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Программы и окружение
+      description: CAD-программа, версия, AI-клиент и важные ограничения.
+  - type: textarea
+    id: example
+    attributes:
+      label: Пример
+      description: Можно приложить обезличенный эскиз или описание детали.

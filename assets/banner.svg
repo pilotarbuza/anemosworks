@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="400" viewBox="0 0 1280 400" role="img" aria-labelledby="title desc">
+  <title id="title">AnemosWorks</title>
+  <desc id="desc">AI automation for engineering CAD. SOLIDWORKS and Autodesk Fusion.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 H 0 V 40" fill="none" stroke="#29333c" stroke-width="1"/></pattern>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#10191f"/><stop offset="1" stop-color="#1b2a32"/></linearGradient>
+  </defs>
+  <rect width="1280" height="400" rx="20" fill="url(#bg)"/>
+  <rect x="800" width="480" height="400" rx="20" fill="url(#grid)" opacity=".6"/>
+  <path d="M72 112 L97 69 L122 112 M82 97 H112" fill="none" stroke="#94e4b1" stroke-width="6" stroke-linejoin="round"/>
+  <text x="72" y="201" fill="#f1f6f4" font-family="Segoe UI,Arial,sans-serif" font-size="76" font-weight="600" letter-spacing="-3">AnemosWorks</text>
+  <text x="76" y="249" fill="#adbdc5" font-family="Segoe UI,Arial,sans-serif" font-size="24">AI automation for engineering CAD</text>
+  <rect x="76" y="290" width="300" height="38" rx="19" fill="#243a34"/>
+  <text x="96" y="315" fill="#b9e6c9" font-family="Segoe UI,Arial,sans-serif" font-size="16">SOLIDWORKS  /  Autodesk Fusion</text>
+  <g transform="translate(920 140)" stroke="#94e4b1" stroke-width="2" stroke-linejoin="round">
+    <path d="M0 25 L110 -38 L220 25 L110 88 Z" fill="#29463f"/>
+    <path d="M0 25 V145 L110 208 V88 Z" fill="#1d3432"/>
+    <path d="M110 88 L220 25 V145 L110 208 Z" fill="#35594b"/>
+    <ellipse cx="110" cy="25" rx="42" ry="23" fill="#14252a"/>
+    <path d="M68 25 Q110 69 152 25" fill="none" stroke="#608e7b"/>
+    <path d="M-27 25 V145 M-35 25 H-19 M-35 145 H-19 M0 170 L110 233 M0 162 V178 M110 225 V241" fill="none" stroke="#6e8793" stroke-width="1"/>
+    <circle cx="0" cy="25" r="4" fill="#d4f5df" stroke="none"/>
+    <circle cx="110" cy="88" r="4" fill="#d4f5df" stroke="none"/>
+    <circle cx="220" cy="25" r="4" fill="#d4f5df" stroke="none"/>
+  </g>
+</svg>
