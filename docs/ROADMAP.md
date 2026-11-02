@@ -1,40 +1,34 @@
-# Engineering Roadmap
+# Roadmap
 
 [ English | [Русский](ROADMAP.ru.md) ]
 
-Status indicators reflect current development reality. This roadmap does not constitute a binding delivery commitment.
+This is where development stands today. Nothing here is a promise of a delivery date.
 
----
+## Done and tested
 
-## Validated Foundation
+- One CAD engine and MCP server for both SOLIDWORKS and Autodesk Fusion.
+- Parametric modeling, the supported assembly mates and export to several formats.
+- Output checks, geometry checks and rollback when a Fusion sketch fails.
+- Command timeouts, cancelling queued commands, and protection against a command running twice.
+- Version negotiation with the Fusion add-in, with a backup made before every update.
 
-- Unified CAD engine and MCP server for SOLIDWORKS and Autodesk Fusion.
-- Parametric modeling, supported assembly constraints/mates, and multi-format exports.
-- Output validation, geometry integrity checks, and Fusion sketch failure rollback.
-- Command timeout handling, pending queue cancellation, and idempotency protection against replay.
-- Fusion add-in version negotiation and automatic backup creation upon updates.
+## First desktop release (planned)
 
----
+- A Windows installer that sets up its runtime dependencies itself.
+- Its own interface for running tasks, with history and a chat.
+- Finding running CAD sessions automatically.
+- Attaching a task to the open document, so you don't pick the CAD system by hand.
+- A setup wizard for supported MCP clients.
+- Signing in to AI providers through the protocols those providers support.
+- AnemosWorks accounts with licensing, device management and in-app updates.
 
-## Initial Desktop Release — Planned
+## Later
 
-- Windows EXE installer with automated runtime dependency resolution.
-- Native UI for task execution, visual history, and direct chat.
-- Automatic discovery of running CAD host processes.
-- Task attachment directly to the active document without manual platform pre-selection.
-- Connection wizard for supported MCP clients.
-- Direct authentication with AI providers via supported vendor protocols.
-- AnemosWorks account licensing, device management, and automatic in-app updates.
+- Reusable engineering workflows.
+- More validation on real mechanical assemblies.
+- More CAD versions and AI clients.
+- Adapters for other CAD systems, each after its own round of testing.
 
----
+A website, registration and billing will come later. For now GitHub is the project's public home.
 
-## Subsequent Phases
-
-- Reusable automated engineering workflow scripts.
-- Additional validation benchmarks against real-world mechanical assemblies.
-- Expansion of CAD version compatibility and AI client adapters.
-- Additional CAD platform adapters following dedicated testing.
-
-The web service, user registration, and billing will launch at a later stage. GitHub currently serves as the official public hub.
-
-[Submit a feature request](https://github.com/pilotarbuza/anemosworks/issues/new/choose)
+[Suggest a feature](https://github.com/pilotarbuza/anemosworks/issues/new/choose)

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="AnemosWorks — CAD Automation" width="100%">
+  <img src="assets/banner.svg" alt="AnemosWorks: CAD automation for SOLIDWORKS and Autodesk Fusion" width="100%">
 </p>
 
 <p align="center">
@@ -10,37 +10,35 @@
   <a href="https://github.com/pilotarbuza/anemosworks/issues">Issues</a>
 </p>
 
----
-
-AnemosWorks is a CAD automation engine for SOLIDWORKS and Autodesk Fusion. It provides programmatic modeling tools (sketches, features, assemblies, drawings, and geometry checks) through an MCP server and an upcoming desktop application.
+AnemosWorks automates SOLIDWORKS and Autodesk Fusion. An MCP server gives an AI client tools for sketches, features, assemblies, drawings and geometry checks. A desktop app built on the same engine is in progress.
 
 ## Status
 
-The CAD engine and MCP server are working (v1.3.0). The desktop application and standalone installer are in development.
+The CAD engine and the MCP server work (v1.3.0). The desktop app and its installer are still in development.
 
-This repository contains public product information, documentation, validation reports, and future release downloads. The core engine is maintained in a private repository.
+This repository holds the public side of the project: documentation, validation reports and, later, release downloads. The engine itself lives in a private repository.
 
-## Capabilities
+## What it can do
 
-- **Parametric parts**: 2D/3D sketches, constraints, dimensions, extrusions, revolves, sweeps, lofts, fillets, chamfers, patterns.
-- **Assemblies**: component insertion, standard mates/joints, hardware fasteners, and interference checks.
-- **Inspection & Export**: mass properties, bounding boxes, rebuild checks, STEP/IGES/STL/Parasolid export.
-- **Sheet metal & Profiles**: sheet metal flanges and structural weldment profiles.
-- **Feature reconstruction**: converts supported prismatic and revolved solid bodies into editable feature trees with geometric deviation checks.
-- **MCP interface**: 140 CAD tools exposed over standard Model Context Protocol.
+- Parametric parts: 2D and 3D sketches, constraints, dimensions, extrudes, revolves, sweeps, lofts, fillets, chamfers and patterns.
+- Assemblies: inserting components, standard mates and joints, fasteners, interference checks.
+- Inspection and export: mass properties, bounding boxes, rebuild checks, export to STEP, IGES, STL and Parasolid.
+- Sheet metal flanges and weldment profiles.
+- Feature reconstruction: supported prismatic and revolved bodies are turned back into an editable feature tree, and the result is compared against the original geometry.
+- 140 CAD tools over the standard Model Context Protocol.
 
-Autodesk Fusion implements 109 of 128 shared CAD operations. Drawings, FEA studies, and animations in Fusion currently have platform limits. See [docs/VALIDATION.md](docs/VALIDATION.md).
+Fusion covers 109 of the 128 shared CAD operations. Drawings, FEA studies and animations are limited by the Fusion platform for now; see [docs/VALIDATION.md](docs/VALIDATION.md).
 
-## Modes of Operation
+## Two ways to use it
 
-1. **MCP Server**: runs as a local tool provider for compatible clients (Claude Desktop, Cursor, and other MCP environments).
-2. **AnemosWorks App**: standalone desktop client with task history, active CAD session detection, and direct document binding (in progress).
+1. As an MCP server, a local tool provider for Claude Desktop, Cursor and other MCP clients.
+2. As the AnemosWorks app (in progress): a desktop client with task history that finds running CAD sessions and binds tasks to the open document.
 
 ## Releases
 
-When ready, signed Windows installers will be distributed through [GitHub Releases](https://github.com/pilotarbuza/anemosworks/releases). Current details: [docs/DOWNLOADS.md](docs/DOWNLOADS.md).
+Signed Windows installers will go out through [GitHub Releases](https://github.com/pilotarbuza/anemosworks/releases). Current state: [docs/DOWNLOADS.md](docs/DOWNLOADS.md).
 
 ## Author
 
-Maksim Akhmadulin — [pilotarbuza.com](https://pilotarbuza.com)  
-Issues & suggestions: [GitHub Issues](https://github.com/pilotarbuza/anemosworks/issues)
+Maksim Akhmadulin, [pilotarbuza.com](https://pilotarbuza.com)  
+Bugs and ideas go to [GitHub Issues](https://github.com/pilotarbuza/anemosworks/issues).
